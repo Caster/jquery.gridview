@@ -110,7 +110,7 @@
 					  newLeft = parseInt($(this).css('left')) + deltaPos.left;
 				  $(this).css({
 					top: newTop,
-					left: newLeft,
+					left: newLeft
 				  }).data('gridview', {
 					offset: $(this).position()
 				  });
@@ -203,6 +203,7 @@
 		return this;
 	  }
  
+	  // Keep the jQuery chain intact
 	  return this.each(function() {
 		// Some variables, initialize gridview if needed
 		var $this = $(this),
@@ -250,9 +251,6 @@
 		  }
 		});
 	  });
-	  
-	  // Keep the jQuery chain intact
-	  return this;
 	},
  
  	/**
@@ -491,7 +489,7 @@
 	/** Indicates if it is possible for the user to zoom in and out by scrolling. */
 	scrollToZoom: true,
 	/** The width of the grid in pixels. */
-	width: 300,
+	width: 300
   };
   
 })(jQuery);
